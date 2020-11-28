@@ -65,7 +65,26 @@ fieldset > label {
   display: block;
 }
 
+fieldset > legend > span {
+  font-size: 1.5rem;
+}
+
 #comments {
   display: block;
   width: 100%;
+  resize: vertical;
+  padding: 10px 15px;
+  font-family:   
+  /* Safari for OS X and iOS (San Francisco) */ -apple-system,
+    /* Chrome < 56 for OS X (San Francisco) */ BlinkMacSystemFont,
+    /* Windows */ "Segoe UI", /* Android */ "Roboto",
+    /* Basic web fallback */ "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.75rem;
+  line-height: 1.25;
+}
+
+#submit {
+  border-radius: 2.5px;
+  height: 50px;
+  font-size: 1.75rem;
 }
