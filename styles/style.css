@@ -1,34 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+
 html {
   /* Set the base value for rem css unit */
   font-size: 10px;
 }
 
 body {
-  font-family:   
-  /* Safari for OS X and iOS (San Francisco) */ -apple-system,
-    /* Chrome < 56 for OS X (San Francisco) */ BlinkMacSystemFont,
-    /* Windows */ "Segoe UI", /* Android */ "Roboto",
-    /* Basic web fallback */ "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+  min-width: 300px;
+}
+
+#intro {
+  box-sizing: border-box;
+  padding: 40px 23px 30px;
+  width: 710px;
+  margin: 0 auto;
 }
 
 #title {
   font-size: 3rem;
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
 }
 
 #description {
-  font-size: 1.75rem;
+  font-size: 1.7rem;
   font-style: italic;
   text-align: center;
+  font-weight: 200;
 }
 
 #survey-form {
+  box-sizing: border-box;
   border: 1px solid black;
-  width: 600px;
-  margin: 0 auto;
+  border-radius: 5px;
+  width: 710px;
   padding: 40px;
+  margin: 0 auto;
   font-size: 1.75rem;
 }
 
@@ -42,14 +52,10 @@ body {
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 5px;
-  height: 35px;
+  height: 38px;
   padding: 0 10px;
-  font-family:   
-  /* Safari for OS X and iOS (San Francisco) */ -apple-system,
-    /* Chrome < 56 for OS X (San Francisco) */ BlinkMacSystemFont,
-    /* Windows */ "Segoe UI", /* Android */ "Roboto",
-    /* Basic web fallback */ "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
 }
 
 #number-label > span {
@@ -61,24 +67,17 @@ body {
   background-color: transparent;
 }
 
-fieldset > label {
-  display: block;
-}
-
 fieldset > legend > span {
   font-size: 1.5rem;
 }
 
 #comments {
   display: block;
+  min-height: 122px;
   width: 100%;
   resize: vertical;
   padding: 10px 15px;
-  font-family:   
-  /* Safari for OS X and iOS (San Francisco) */ -apple-system,
-    /* Chrome < 56 for OS X (San Francisco) */ BlinkMacSystemFont,
-    /* Windows */ "Segoe UI", /* Android */ "Roboto",
-    /* Basic web fallback */ "Helvetica Neue", Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.75rem;
   line-height: 1.25;
 }
@@ -87,4 +86,47 @@ fieldset > legend > span {
   border-radius: 2.5px;
   height: 50px;
   font-size: 1.75rem;
+}
+
+#name-label,
+#email-label,
+#number-label,
+label[for="dropdown"],
+fieldset > legend,
+fieldset > label,
+label[for="dropdown2"],
+label[for="comments"] {
+  display: block;
+  padding-bottom: 0.55rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+#dropdown,
+fieldset,
+#dropdown2,
+#comments,
+#submit {
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 767px) {
+  #intro,
+  #survey-form {
+    width: 540px;
+  }
+}
+
+@media (max-width: 575px) {
+  #intro,
+  #survey-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 475px) {
+  body #survey-form {
+    padding: 40px 10px;
+  }
 }
