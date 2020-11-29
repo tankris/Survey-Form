@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+}
+
 html {
   /* Set the base value for rem css unit */
   font-size: 10px;
@@ -23,6 +30,8 @@ body {
   font-size: 3rem;
   font-weight: 400;
   text-align: center;
+  line-height: 1.25;
+  margin-bottom: 5px;
 }
 
 #description {
@@ -62,6 +71,68 @@ body {
   font-size: 1.5rem;
 }
 
+/* Removing the default radio button */
+input[type="radio"] {
+  appearance: none;
+  /* Chrome/Opera support */
+  -webkit-appearance: none;
+}
+
+/* Custom radio button */
+input[type="radio"] {
+  position: relative;
+  top: 0.25rem;
+  border: 1px solid black;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+}
+
+/* When hovering over cutom radio button */
+input[type="radio"]:hover {
+  box-shadow: inset -2px -2px 0 4.5px lightgray;
+}
+
+/* When radio button is selected */
+input[type="radio"]:checked {
+  box-shadow: inset -2px -2px 0 4.5px gray;
+}
+
+/* Disabling the default checkbox */
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Adding custom checkbox */
+input[type="checkbox"] {
+  border: 1px solid black;
+  border-radius: 2.5px;
+  height: 1.75rem;
+  width: 1.75rem;
+  vertical-align: text-bottom;
+}
+
+/* Adding hover state to the custom checkbox */
+input[type="checkbox"]:hover:before {
+  position: relative;
+  bottom: 0.25em;
+  left: 0.1em;
+  content: "✔";
+  font-size: 1.25em;
+  color: lightgray;
+}
+
+/* Adding checked state to the custom checkbox */
+input[type="checkbox"]:checked:before {
+  position: relative;
+  bottom: 0.25em;
+  left: 0.1em;
+  content: "✔";
+  font-size: 1.25em;
+  color: gray;
+}
+
 #dropdown,
 #dropdown2 {
   background-color: transparent;
@@ -83,6 +154,7 @@ fieldset > legend > span {
 }
 
 #submit {
+  margin: 2.5rem 0 2rem;
   border-radius: 2.5px;
   height: 50px;
   font-size: 1.75rem;
@@ -93,11 +165,21 @@ fieldset > legend > span {
 #number-label,
 label[for="dropdown"],
 fieldset > legend,
-fieldset > label,
+#check-boxes > label,
 label[for="dropdown2"],
 label[for="comments"] {
   display: block;
   padding-bottom: 0.55rem;
+}
+
+/* Removing padding from the last checkboxes label */
+#check-boxes > label:nth-last-child(1) {
+  padding-bottom: 0;
+}
+
+#radio-buttons > label {
+  display: block;
+  padding-bottom: 0.3rem;
 }
 
 input[type="text"],
@@ -105,9 +187,7 @@ input[type="email"],
 input[type="number"],
 #dropdown,
 fieldset,
-#dropdown2,
-#comments,
-#submit {
+#dropdown2 {
   margin-bottom: 3rem;
 }
 
