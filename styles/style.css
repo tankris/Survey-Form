@@ -119,21 +119,27 @@ input[type="checkbox"] {
 
 /* Adding custom checkbox */
 input[type="checkbox"] {
-  border: 1px solid black;
-  border-radius: 2.5px;
-  height: 1.75rem;
-  width: 1.75rem;
-  vertical-align: text-bottom;
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--color-darkblue);
+  vertical-align: -0.4rem;
+}
+
+/* Adding the tick mark for the checkbox and setting it to hidden by default */
+input[type="checkbox"]::before {
+  content: "✔";
+  position: absolute;
+  font-size: 1.75rem;
+  right: -0.1rem;
+  top: -0.3rem;
+  color: var(--color-white);
+  visibility: hidden;
 }
 
 /* Adding hover state to the custom checkbox */
 input[type="checkbox"]:hover:before {
-  position: relative;
-  bottom: 0.25em;
-  left: 0.1em;
-  content: "✔";
-  font-size: 1.25em;
-  color: var(--color-white);
+  visibility: visible;
 }
 
 /* Setting background color upon hovering since adding it to :hover:before doesn't apply it correctly */
@@ -143,12 +149,7 @@ input[type="checkbox"]:hover {
 
 /* Adding checked state to the custom checkbox */
 input[type="checkbox"]:checked:before {
-  position: relative;
-  bottom: 0.25em;
-  left: 0.1em;
-  content: "✔";
-  font-size: 1.25em;
-  color: var(--color-white);
+  visibility: visible;
 }
 
 /* Setting background color upon checking the box since adding it to :checked:before doesn't apply it correctly */
