@@ -8,9 +8,8 @@
 }
 
 html {
-  /* Set the base value for rem css unit */
-  font-size: 10px;
-  height: 100%;
+  /* Setting minimum height and background to html results in linear gradient being applied to the entire page regradless of zoom without repeating the gradient */
+  min-height: 100%;
   background: linear-gradient(
       115deg,
       rgba(58, 58, 158, 0.8),
@@ -19,6 +18,8 @@ html {
     url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg)
       no-repeat center center fixed;
   background-size: cover;
+  /* Set the base value for rem css unit */
+  font-size: 10px;
 }
 
 body {
